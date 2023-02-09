@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- airflow.apache.org_v1alpha2_airflowbase.yaml
+- airflow.apache.org_v1alpha2_airflowcluster.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

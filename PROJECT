@@ -1,10 +1,28 @@
-domain: apache.org
-repo: github.com/apache/airflow-on-k8s-operator
+domain: airflow.apache.org
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: airflow-on-k8s-operator
+repo: github.com/skattoju/airflow-on-k8s-operator
 resources:
-- group: airflow
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: airflow.apache.org
+  group: airflow.apache.org
   kind: AirflowBase
-  version: v1alpha1
-- group: airflow
+  path: github.com/skattoju/airflow-on-k8s-operator/api/v1alpha2
+  version: v1alpha2
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: airflow.apache.org
+  group: airflow.apache.org
   kind: AirflowCluster
-  version: v1alpha1
-version: "2"
+  path: github.com/skattoju/airflow-on-k8s-operator/api/v1alpha2
+  version: v1alpha2
+version: "3"

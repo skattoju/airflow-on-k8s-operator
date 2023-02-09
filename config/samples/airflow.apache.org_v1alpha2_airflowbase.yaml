@@ -1,0 +1,12 @@
+apiVersion: airflow.apache.org.airflow.apache.org/v1alpha2
+kind: AirflowBase
+metadata:
+  labels:
+    app.kubernetes.io/name: airflowbase
+    app.kubernetes.io/instance: airflowbase-sample
+    app.kubernetes.io/part-of: airflow-on-k8s-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: airflow-on-k8s-operator
+  name: airflowbase-sample
+spec:
+  # TODO(user): Add fields here
